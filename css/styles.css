@@ -1,0 +1,1192 @@
+/*
+Main Stylesheet this file can be compiled into the site's master css file
+*/
+/* ------------------------------------------------------------------------
+ * Colors
+ * -----------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ * End Colors
+ * -----------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ * Common UI components
+ * -----------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ * End Common UI components
+ * -----------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ * UI Mixins
+ * -----------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ * End UI Mixins
+ * -----------------------------------------------------------------------*//*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio[controls],
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.231;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+  color: #222;
+}
+/*
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+::-moz-selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:focus {
+  outline: thin dotted;
+}
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover,
+a:active {
+  outline: 0;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small {
+  font-size: 85%;
+}
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul,
+ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+/*
+ * Correct overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+figure {
+  margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer;
+}
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+/*
+ * Consistent box sizing and appearance
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+}
+input[type="search"] {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/*
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* Colors for form validity */
+input:invalid,
+textarea:invalid {
+  background-color: #f0dddd;
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+.ir br {
+  display: none;
+}
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+  display: none;
+}
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+/* =============================================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+}
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+}
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  a,
+  a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+.button {
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #1d609c;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 4px 17px;
+  text-shadow: 0px -1px 0 #000000;
+  text-decoration: none;
+  font-weight: bold;
+  background: #47a5d9;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #71bae2 0%, #298dc4 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #71bae2), color-stop(100%, #298dc4));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #71bae2 0%, #298dc4 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #71bae2 0%, #298dc4 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #71bae2 0%, #298dc4 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #71bae2 0%, #298dc4 100%);
+  /* W3C */
+
+}
+.button:hover {
+  background: #5cafdd;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #86c4e6 0%, #329bd5 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #86c4e6), color-stop(100%, #329bd5));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #86c4e6 0%, #329bd5 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #86c4e6 0%, #329bd5 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #86c4e6 0%, #329bd5 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #86c4e6 0%, #329bd5 100%);
+  /* W3C */
+
+}
+.button:active {
+  background: #298dc4;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #47a5d9 0%, #206f9a 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #47a5d9), color-stop(100%, #206f9a));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #47a5d9 0%, #206f9a 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #47a5d9 0%, #206f9a 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #47a5d9 0%, #206f9a 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #47a5d9 0%, #206f9a 100%);
+  /* W3C */
+
+}
+.button:visited {
+  color: #fff;
+}
+h1 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 1em;
+}
+/*
+BASE (MOBILE) SIZE
+*/
+body {
+  background: #040404 url('../images/bkg_image.jpg') no-repeat top center;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  font: 14px/1.45em 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+  color: #444444;
+}
+.wrapper {
+  background-color: #f9f9f9;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin: 98px 10px 10px;
+  min-height: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+/* ------------------------------------------------------------------------
+ * Start Header
+ * -----------------------------------------------------------------------*/
+header.main {
+  border-bottom: 1px solid #cccccc;
+  font-size: .85em;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+
+}
+header.main .event-poster {
+  width: 60px;
+  float: left;
+  border: 1px solid #cccccc;
+  margin: 0 12px 0 0;
+}
+header.main .event-info {
+  border-bottom: 1px solid #cccccc;
+  padding: 20px 20px 25px;
+}
+header.main .username {
+  margin: 0;
+  line-height: 1em;
+}
+header.main p {
+  margin: 0;
+}
+header.main time {
+  display: block;
+  white-space: nowrap;
+}
+header.main .follow-info {
+  text-align: left;
+  padding: 20px;
+}
+header.main .follow-info h2 {
+  margin: 0;
+}
+header.main .name-container {
+  float: left;
+}
+header.main .avatar-container {
+  float: left;
+  width: 60px;
+  margin-right: 12px;
+}
+header.main .avatar {
+  width: 100%;
+  border: 1px solid #cccccc;
+}
+header.main .follow {
+  display: block;
+  font-size: .9em;
+  padding: 4px;
+  text-align: center;
+}
+.follow-counts {
+  list-style-type: none;
+  padding: 0;
+  margin-top: .2em;
+}
+.follow-counts li {
+  border-top: 1px solid #cccccc;
+  line-height: 2em;
+}
+.follow-counts li:first-child {
+  border-top: none;
+}
+/* ------------------------------------------------------------------------
+ * End Header
+ * -----------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+ * Start event list
+ * -----------------------------------------------------------------------*/
+.events-container {
+  background-color: #fff;
+}
+.event-list {
+  padding: 0;
+  list-style-type: none;
+}
+.event-list .feature {
+  width: 100%;
+  height: auto;
+}
+.event {
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 15px;
+}
+.event header h3 {
+  margin-bottom: 22px;
+  font-size: .85em;
+}
+.event header h3 img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.event .event-meta {
+  font-size: .65em;
+  color: #666;
+  float: right;
+  margin-top: 12px;
+}
+.status-event .content p {
+  margin-top: 0;
+}
+.loader {
+  padding: 50px;
+  text-align: center;
+  background-color: #F0F0F0;
+  border: 1px solid #cccccc;
+  height: 60px;
+}
+.loader .ajax-loader {
+  display: none;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.loader .load {
+  display: block;
+}
+.loader .loading {
+  display: none;
+  margin-top: 9px;
+  margin-left: -32px;
+}
+.loader.loading .load {
+  display: none;
+}
+.loader.loading .loading {
+  display: block;
+}
+.loader.loading .ajax-loader {
+  display: inline;
+}
+.content-cover {
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  bottom: 0;
+}
+/* ------------------------------------------------------------------------
+ * End event list
+ * -----------------------------------------------------------------------*//*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (min-width: 481px) {
+  
+}
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device.
+*/
+@media only screen and (min-width: 768px) {
+  /*
+  	960 Grid System ~ Core CSS.
+  	Learn more ~ http://960.gs/
+  
+  	Licensed under GPL and MIT.
+  */
+  /* =Containers
+  --------------------------------------------------------------------------------*/
+  .container_12,
+  .container_16 {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  /* =Grid >> Global
+  --------------------------------------------------------------------------------*/
+  .grid_1,
+  .grid_2,
+  .grid_3,
+  .grid_4,
+  .grid_5,
+  .grid_6,
+  .grid_7,
+  .grid_8,
+  .grid_9,
+  .grid_10,
+  .grid_11,
+  .grid_12,
+  .grid_13,
+  .grid_14,
+  .grid_15,
+  .grid_16 {
+    display: inline;
+    float: left;
+  }
+  .container_12 .grid_3,
+  .container_16 .grid_4 {
+    width: 25%;
+  }
+  .container_12 .grid_6,
+  .container_16 .grid_8 {
+    width: 50%;
+  }
+  .container_12 .grid_9,
+  .container_16 .grid_12 {
+    width: 75%;
+  }
+  .container_12 .grid_12,
+  .container_16 .grid_16 {
+    width: 100%;
+  }
+  /* =Grid >> Children (Alpha ~ First, Omega ~ Last)
+  --------------------------------------------------------------------------------*/
+  .alpha {
+    margin-left: 0;
+  }
+  .omega {
+    margin-right: 0;
+  }
+  /* =Grid >> 12 Columns
+  --------------------------------------------------------------------------------*/
+  .container_12 .grid_1 {
+    width: 6.333%;
+  }
+  .container_12 .grid_2 {
+    width: 14.666%;
+  }
+  .container_12 .grid_4 {
+    width: 31.333%;
+  }
+  .container_12 .grid_5 {
+    width: 39.666%;
+  }
+  .container_12 .grid_7 {
+    width: 56.333%;
+  }
+  .container_12 .grid_8 {
+    width: 64.666%;
+  }
+  .container_12 .grid_10 {
+    width: 81.333%;
+  }
+  .container_12 .grid_11 {
+    width: 89.666%;
+  }
+  /* =Grid >> 16 Columns
+  --------------------------------------------------------------------------------*/
+  .container_16 .grid_1 {
+    width: 4.25%;
+  }
+  .container_16 .grid_2 {
+    width: 10.5%;
+  }
+  .container_16 .grid_3 {
+    width: 16.75%;
+  }
+  .container_16 .grid_5 {
+    width: 29.25%;
+  }
+  .container_16 .grid_6 {
+    width: 35.5%;
+  }
+  .container_16 .grid_7 {
+    width: 41.75%;
+  }
+  .container_16 .grid_9 {
+    width: 54.25%;
+  }
+  .container_16 .grid_10 {
+    width: 60.5%;
+  }
+  .container_16 .grid_11 {
+    width: 66.75%;
+  }
+  .container_16 .grid_13 {
+    width: 79.25%;
+  }
+  .container_16 .grid_14 {
+    width: 85.5%;
+  }
+  .container_16 .grid_15 {
+    width: 91.75%;
+  }
+  /* =Prefix Extra Space >> Global
+  --------------------------------------------------------------------------------*/
+  .container_12 .prefix_3,
+  .container_16 .prefix_4 {
+    padding-left: 25%;
+  }
+  .container_12 .prefix_6,
+  .container_16 .prefix_8 {
+    padding-left: 50%;
+  }
+  .container_12 .prefix_9,
+  .container_16 .prefix_12 {
+    padding-left: 75%;
+  }
+  /* =Prefix Extra Space >> 12 Columns
+  --------------------------------------------------------------------------------*/
+  .container_12 .prefix_1 {
+    padding-left: 8.333%;
+  }
+  .container_12 .prefix_2 {
+    padding-left: 16.666%;
+  }
+  .container_12 .prefix_4 {
+    padding-left: 33.333%;
+  }
+  .container_12 .prefix_5 {
+    padding-left: 41.666%;
+  }
+  .container_12 .prefix_7 {
+    padding-left: 58.333%;
+  }
+  .container_12 .prefix_8 {
+    padding-left: 66.666%;
+  }
+  .container_12 .prefix_10 {
+    padding-left: 83.333%;
+  }
+  .container_12 .prefix_11 {
+    padding-left: 91.666%;
+  }
+  /* =Prefix Extra Space >> 16 Columns
+  --------------------------------------------------------------------------------*/
+  .container_16 .prefix_1 {
+    padding-left: 6.25%;
+  }
+  .container_16 .prefix_2 {
+    padding-left: 12.5%;
+  }
+  .container_16 .prefix_3 {
+    padding-left: 18.75%;
+  }
+  .container_16 .prefix_5 {
+    padding-left: 31.25%;
+  }
+  .container_16 .prefix_6 {
+    padding-left: 37.5%;
+  }
+  .container_16 .prefix_7 {
+    padding-left: 43.75%;
+  }
+  .container_16 .prefix_9 {
+    padding-left: 56.25%;
+  }
+  .container_16 .prefix_10 {
+    padding-left: 62.5%;
+  }
+  .container_16 .prefix_11 {
+    padding-left: 68.75%;
+  }
+  .container_16 .prefix_13 {
+    padding-left: 81.25%;
+  }
+  .container_16 .prefix_14 {
+    padding-left: 87.5%;
+  }
+  .container_16 .prefix_15 {
+    padding-left: 93.75%;
+  }
+  /* =Suffix Extra Space >> Global
+  --------------------------------------------------------------------------------*/
+  .container_12 .suffix_3,
+  .container_16 .suffix_4 {
+    padding-right: 25%;
+  }
+  .container_12 .suffix_6,
+  .container_16 .suffix_8 {
+    padding-right: 50%;
+  }
+  .container_12 .suffix_9,
+  .container_16 .suffix_12 {
+    padding-right: 75%;
+  }
+  /* =Suffix Extra Space >> 12 Columns
+  --------------------------------------------------------------------------------*/
+  .container_12 .suffix_1 {
+    padding-right: 8.333%;
+  }
+  .container_12 .suffix_2 {
+    padding-right: 16.666%;
+  }
+  .container_12 .suffix_4 {
+    padding-right: 33.333%;
+  }
+  .container_12 .suffix_5 {
+    padding-right: 41.666%;
+  }
+  .container_12 .suffix_7 {
+    padding-right: 58.333%;
+  }
+  .container_12 .suffix_8 {
+    padding-right: 66.666%;
+  }
+  .container_12 .suffix_10 {
+    padding-right: 83.333%;
+  }
+  .container_12 .suffix_11 {
+    padding-right: 91.666%;
+  }
+  /* =Suffix Extra Space >> 16 Columns
+  --------------------------------------------------------------------------------*/
+  .container_16 .suffix_1 {
+    padding-right: 6.25%;
+  }
+  .container_16 .suffix_2 {
+    padding-right: 16.5%;
+  }
+  .container_16 .suffix_3 {
+    padding-right: 18.75%;
+  }
+  .container_16 .suffix_5 {
+    padding-right: 31.25%;
+  }
+  .container_16 .suffix_6 {
+    padding-right: 37.5%;
+  }
+  .container_16 .suffix_7 {
+    padding-right: 43.75%;
+  }
+  .container_16 .suffix_9 {
+    padding-right: 56.25%;
+  }
+  .container_16 .suffix_10 {
+    padding-right: 62.5%;
+  }
+  .container_16 .suffix_11 {
+    padding-right: 68.75%;
+  }
+  .container_16 .suffix_13 {
+    padding-right: 81.25%;
+  }
+  .container_16 .suffix_14 {
+    padding-right: 87.5%;
+  }
+  .container_16 .suffix_15 {
+    padding-right: 93.75%;
+  }
+  /* =Clear Floated Elements
+  --------------------------------------------------------------------------------*/
+  /* http://sonspring.com/journal/clearing-floats */
+  html body * span.clear,
+  html body * div.clear,
+  html body * li.clear,
+  html body * dd.clear {
+    background: none;
+    border: 0;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  /* http://www.positioniseverything.net/easyclearing.html */
+  .clearfix:after {
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
+    height: 0;
+  }
+  .clearfix {
+    display: inline-block;
+  }
+  * html .clearfix {
+    height: 1%;
+  }
+  .clearfix {
+    display: block;
+  }
+  .wrapper {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header.main {
+    text-align: center;
+    border-bottom: none;
+  }
+  header.main .event-poster {
+    float: none;
+    width: 129px;
+    margin: 33px 0 5px 0;
+  }
+  header.main hgroup {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 7px;
+    margin: 0 auto 7px auto;
+    width: 167px;
+  }
+  header.main .follow-info {
+    margin: 14px 0;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+  
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+  
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+  
+    width: 100%;
+    padding: 20px 20px 20px 27px;
+  }
+  header.main .follow {
+    margin-bottom: 1em;
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+  header.main .avatar-container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+  
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+  
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+  
+    padding: 0 5px 0 0;
+    width: auto;
+    margin: 0;
+  }
+  header.main .name-container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+  
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+  
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+  
+    padding: 0 0 0 5px;
+  }
+  header.main .avatar {
+    width: 90px;
+  }
+  header.main .follow-counts li {
+    white-space: nowrap;
+  }
+  .event-list {
+    margin: 0;
+    border-left: 1px solid #cccccc;
+    padding-top: 20px;
+  }
+  .event-list header h3 {
+    font-size: 1em;
+  }
+  .event-list header h3 img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+  }
+  .event-list .event {
+    padding: 16px 69px 16px 56px;
+  }
+  .event-list .event-meta {
+    margin-top: 16px;
+    font-size: .75em;
+  }
+  .event-list .event-meta time {
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+}
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) {
+  .wrapper {
+    width: 1017px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container_16 header.main.grid_4 {
+    width: 251px;
+  }
+  .container_16 .events-container.grid_12 {
+    width: 766px;
+  }
+}
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) {
+  
+}
+/*
+RETINA (2x RESOLUTION DEVICES)
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  
+}
+/*
+iPHONE 5 MEDIA QUERY
+*/
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+/*
+PRINT STYLESHEET
+*/
+@media print {
+  
+}

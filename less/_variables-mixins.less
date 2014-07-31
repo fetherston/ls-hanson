@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------------------
+ * Colors
+ * -----------------------------------------------------------------------*/
+@text-color: #444444;
+/* ------------------------------------------------------------------------
+ * End Colors
+ * -----------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------
+ * Common UI components
+ * -----------------------------------------------------------------------*/
+@ls-border: 1px solid #ccc;
+/* ------------------------------------------------------------------------
+ * End Common UI components
+ * -----------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------
+ * UI Mixins
+ * -----------------------------------------------------------------------*/
+.border-radius (@radius) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+.background-size (@param) {
+	-webkit-background-size: @param;
+	-moz-background-size: @param;
+	-o-background-size: @param;
+	background-size: @param;
+}
+.background-gradient (@base) {
+	background: @base; /* Old browsers */
+	background: -moz-linear-gradient(top, lighten(@base, 10%) 0%, darken(@base, 10%) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@base, 10%)), color-stop(100%,darken(@base, 10%))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, lighten(@base, 10%) 0%,darken(@base, 10%) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, lighten(@base, 10%) 0%,darken(@base, 10%) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, lighten(@base, 10%) 0%,darken(@base, 10%) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, lighten(@base, 10%) 0%,darken(@base, 10%) 100%); /* W3C */
+}
+.box-sizing(@param){
+	-webkit-box-sizing: @param; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: @param;    /* Firefox, other Gecko */
+	box-sizing: @param;         /* Opera/IE 8+ */
+}
+ /* ------------------------------------------------------------------------
+ * End UI Mixins
+ * -----------------------------------------------------------------------*/

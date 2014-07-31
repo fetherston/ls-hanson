@@ -1,0 +1,27 @@
+<header class="main grid_4">
+	<div class="event-info clearfix">
+		<img class="event-poster" src="{{logo.small_url}}">
+		<hgroup>
+			<h1 class="username">{{full_name}}</h1>
+			<p>Music Event</p>
+		</hgroup>
+		<time datetime="{{start_time}}">{{toDateString start_time}}</time>
+		<time datetime="{{end_time}}">{{toDateString end_time}}</time>
+	</div>
+	<div class="follow-info container_16 clearfix">
+		<div class="avatar-container grid_8">
+			<img alt="{{owner.full_name}}" class="avatar" src="{{owner.picture.small_url}}">
+			<a class="button follow" href="#">Follow</a>
+		</div>
+		<div class="name-container grid_8">
+			<h2>{{owner.full_name}}</h2>
+			<ul class="follow-counts">
+				<li><strong>{{formatNumber owner.upcoming_events.total}}</strong> Events</li>
+				<li><strong>{{formatNumber owner.followers.total}}</strong> Followers</li>
+				<li><strong>{{formatNumber owner.following.total}}</strong> Following</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="events-container grid_12"></div>
+<div class="content-cover"></div>

@@ -1,0 +1,168 @@
+body{
+	background: #040404 url('../images/bkg_image.jpg') no-repeat top center;
+	.background-size(100% auto);
+	font: 14px/1.45em 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+	color: @text-color;
+}
+
+.wrapper{
+	background-color: #f9f9f9;
+	.border-radius(6px);
+	border: 1px solid #ccc;
+	margin: 98px 10px 10px;
+	min-height: 1200px;
+	position: relative;
+	overflow: hidden;
+}
+
+/* ------------------------------------------------------------------------
+ * Start Header
+ * -----------------------------------------------------------------------*/
+header.main{
+	border-bottom: @ls-border;
+
+	font-size: .85em;
+	.box-sizing(border-box);
+	.event-poster{
+		width: 60px;
+		float: left;
+		border: @ls-border;
+		margin: 0 12px 0 0;
+	}
+	.event-info{
+		border-bottom: @ls-border;
+		padding: 20px 20px 25px;
+	}
+	.username{
+		margin: 0;
+		line-height: 1em;
+	}
+	p{
+		margin: 0;
+	}
+	time{
+		display: block;
+		white-space: nowrap;
+	}
+	.follow-info{
+		text-align: left;
+		padding: 20px;
+		h2{
+			margin: 0;
+		}
+	}
+	.name-container{
+		float: left;
+	}
+	.avatar-container{
+		float: left;
+		width: 60px;
+		margin-right: 12px;
+	}
+	.avatar{
+		width: 100%;
+		border: @ls-border;
+	}
+	.follow{
+		display: block;
+		font-size: .9em;
+		padding: 4px;
+		text-align: center;
+	}
+}
+
+.follow-counts{
+	list-style-type: none;
+	padding:0;
+	margin-top: .2em;
+	li{
+		border-top: @ls-border;
+		line-height: 2em;
+	}
+	li:first-child{
+		border-top: none;
+	}
+}
+/* ------------------------------------------------------------------------
+ * End Header
+ * -----------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------
+ * Start event list
+ * -----------------------------------------------------------------------*/
+.events-container{
+	background-color: #fff;
+}
+.event-list{
+	padding: 0;
+	list-style-type: none;
+	.feature{
+		width: 100%;
+		height: auto;
+	}
+}
+.event{
+	border-bottom: @ls-border;
+	padding: 10px 15px;
+	header{
+		h3{
+			margin-bottom: 22px;
+			font-size: .85em;
+			img{
+				width: 18px;
+				height: 18px;
+				vertical-align: middle;
+			}
+		}
+	}
+	.event-meta{
+		font-size: .65em;
+		color: #666;
+		float: right;
+		margin-top: 12px;
+		time{
+			
+		}
+	}
+}
+.status-event .content p{
+	margin-top: 0;
+}
+.loader{
+	padding: 50px;
+	text-align: center;
+	background-color: #F0F0F0;
+	border: @ls-border;
+	height: 60px;
+	.ajax-loader{
+		display: none;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+	.load{display: block;}
+	.loading{
+		display: none; 
+		margin-top: 9px;
+		margin-left: -32px;
+	}
+	&.loading {
+		.load{display: none;}
+		.loading{display: block;}
+		.ajax-loader{
+			display: inline;
+		}
+	}
+}
+.content-cover{
+	position: absolute;
+	top: 0; 
+	// background: #fff url('../images/ajax-loader.gif') center 150px no-repeat;
+	background-color: #fff;
+	opacity: 0.8;
+	width: 100%;
+	bottom: 0;
+}
+/* ------------------------------------------------------------------------
+ * End event list
+ * -----------------------------------------------------------------------*/

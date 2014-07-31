@@ -1,0 +1,36 @@
+<article id="{{data.id}}" class="{{type}}-event">
+	<header class="clearfix">
+		<div class="event-meta">
+			<time class="timeago" datetime="{{data.publish_at}}">{{data.publish_at}}</time>
+			{{formatNumber data.views}} Views
+		</div>
+		<h3><img class="avatar" src="{{account.owner.picture.thumb_url}}" height="25" width"25"> {{account.owner.full_name}}</h3>
+	</header>
+	<section class="content">
+		{{#equal type "video"}}
+		<video class="feature" controls="controls" poster="{{data.thumbnail_url}}" width="640" height="360">
+			<source src="{{data.progressive_url}}" type="video/mp4" />
+			<object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+				<param name="allowFullScreen" value="true" />
+				<param name="wmode" value="transparent" />
+				<param name="flashVars" value="config={'playlist':['test',{'url':'{{data.progressive_url}}','autoPlay':false}]}" />
+				<img alt="{{data.caption}}" src="{{data.thumbnail_url}}" width="640" height="360" title="No video playback capabilities, please download the video below" />
+			</object>
+		</video>
+		<p class="hidden">
+			<strong>Download video:</strong> <a href="{{data.progressive_url}}">MP4 format</a>
+		</p>
+		<p>{{data.caption}}</p>
+		{{/equal}}
+
+		{{#equal type "status"}}
+		<p>{{data.text}}</p>
+		{{/equal}}
+
+		{{#equal type "image"}}
+		<img {{#data.caption}}alt="{{.}}"{{/data.caption}} class="feature" src="{{data.image.medium_url}}" height="{{data.image.height}}" width="{{data.image.width}}">
+		<p>{{data.caption}}</p>
+		{{/equal}}
+	</section>
+</article>

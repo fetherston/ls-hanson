@@ -1,0 +1,31 @@
+/* 
+IE Style sheet, where dreams go to die. Served conditionally in the <head>
+Basically this leverages LESS imports to generate a flat, media query-less
+stylesheet for IE < 9 with all styles needed for typical desktops.
+Then, the IE classes on the <html> tag can be used to apply conditional styles
+*/
+
+// import common and reusables
+@import "_variables-mixins";
+@import "_fluid-grid";
+@import "_768up";
+@import "_1030up";
+
+.ie7 { 
+	header.main .follow {
+		display: block;
+		font-size: .9em;
+		padding: 4px;
+		text-align: center;
+		width: 80px;
+	}
+	.container{
+		width: 1019px;
+	}
+	.event-meta{
+		font-size: .75em;
+		color: #666;
+		float: right;
+		margin-top: 0;
+	}
+}
